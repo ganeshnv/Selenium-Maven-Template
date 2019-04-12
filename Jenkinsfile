@@ -14,10 +14,11 @@ pipeline {
         }  
      } 
       stage ('mail') {
-       mail to: "nv.ganesh93@gmail.com" ,
-       body: "Build status ${env.BUILD_URL}",
-       subject: "Pilepile Job: ${currentBuild.fullDisplsyName}"
-     }
-   }
- }   
-
+         steps {
+            mail to: "nv.ganesh93@gmail.com" ,
+            body: "Build status ${env.BUILD_URL}",
+            subject: "Pilepile Job: ${currentBuild.fullDisplsyName}"
+          }
+       }
+    }   
+}
