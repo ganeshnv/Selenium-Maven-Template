@@ -20,4 +20,5 @@ pipeline {
        subject: "Pilepile Job: ${currentBuild.fullDisplsyName}"
      }
    }
+ }   
 }
